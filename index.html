@@ -8,16 +8,23 @@
 </head>
 <body>
   <header>
-    <h1>Movey</h1>
-    <input type="text" id="searchInput" placeholder="Search for movies or TV shows...">
-    <button id="searchButton">Search</button>
+    <h1>MOVEY</h1>
+    <form id="searchForm" class="search-group">
+      <input type="text" id="searchInput" placeholder="Search movies or TV shows..." />
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="movie">Movies</option>
+        <option value="tv">TV Shows</option>
+      </select>
+      <button type="submit" id="searchButton">Search</button>
+    </form>
   </header>
 
   <main>
-    <section id="results"></section>
     <section id="playerSection" class="hidden">
       <div id="playerContainer"></div>
     </section>
+    <section id="results"></section>
   </main>
 
   <script src="script.js"></script>
