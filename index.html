@@ -7,26 +7,39 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Modal Overlay -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal-content" id="modalContent"></div>
+    <button class="modal-close" id="modalClose">✕</button>
+  </div>
   <header>
     <h1>MOVEY</h1>
-    <form id="searchForm" class="search-group">
-      <input type="text" id="searchInput" placeholder="Search movies or TV shows..." />
-      <select id="filterSelect">
-        <option value="all">All</option>
-        <option value="movie">Movies</option>
-        <option value="tv">TV Shows</option>
-      </select>
-      <button type="submit" id="searchButton">Search</button>
-    </form>
+    <button id="searchOpen" class="search-open">🔍</button>
   </header>
 
-  <main>
-    <section id="playerSection" class="hidden">
-      <div id="playerContainer"></div>
-    </section>
-    <section id="results"></section>
+  <main id="home">
+    <section id="continue-watching-section"></section>
+     <section id="recommended-section"></section>
+     <section id="trending-movies-section"></section>
+     <section id="trending-tv-section"></section>
   </main>
-
-  <script src="script.js"></script>
+  <!-- Player Overlay -->
+  <div id="playerOverlay" class="player-overlay hidden">
+    <div class="player-header">
+      <button id="playerBack" class="player-back">←</button>
+      <h2 id="playerTitle" class="player-title"></h2>
+    </div>
+    <div id="playerControls" class="player-controls"></div>
+    <div id="playerWrapper" class="player-wrapper"></div>
+  </div>
+  <!-- Search Overlay -->
+  <div id="searchOverlay" class="search-overlay hidden">
+    <div class="search-header">
+      <button id="searchClose" class="search-close">✕</button>
+      <input id="searchInput" placeholder="Search movies & TV shows…" />
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
